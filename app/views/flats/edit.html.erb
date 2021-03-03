@@ -1,0 +1,14 @@
+<div class="container my-3">
+  <h3>Edit</h3>
+  <%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :url %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit class: 'btn btn-success w-100' %>
+  <% end %>
+  <%= link_to 'Cancel', flats_path, class: 'btn btn-secondary my-2' %>
+</div>
+

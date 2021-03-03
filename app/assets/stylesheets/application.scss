@@ -11,3 +11,40 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.head {
+  background-color: $light-gray;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body {
+  background-color: white;
+}
+
+.my-container {
+  padding-top: 50px;
+
+}
+.actions {
+  padding: 10px;
+}
+
+.gray {
+  background-color: $light-gray;
+
+}
+
+i {
+  margin-right: 10px;
+  font-size: 1.3rem
+}
+
+.banner {
+  height: 30vh;
+  z-index: 1;
+  width: 100vw;
+
+
+}

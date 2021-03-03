@@ -1,0 +1,59 @@
+<div class="banner" style="background-image: url(<%= @flat.url %>)">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="card gray my-3 p-3">
+        <h2><%= @flat.name %></h2>
+        <h6><%= @flat.address %></h6>
+      </div>
+      <div class="card gray my-3 p-3">
+        <h3>Something more about this place ..</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card gray my-3 p-3">
+        <h3>Book this place!</h3>
+        <form>
+          <div class="form-row align-items-center">
+         <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">21/11/2021</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">From:</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="21/11/2021">
+              </div>
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">23/11/2021</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">to:</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="23/11/2021">
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-success w-100">Book</button>
+            </div>
+          </div>
+      </form>
+      </div>
+      <div class="card gray my-3 p-3">
+        <h3>Details</h3>
+        <div class="icons">
+        <p><i class="fas fa-user-astronaut"></i> <%= @flat.number_of_guests %></p>
+        <p><i class="fas fa-coins"></i> <%= @flat.price_per_night %></p>
+        </div>
+
+      </div>
+      <div class="card gray my-3 p-3">
+        <p>Share </p>
+       <p><i class="fas fa-envelope"></i><i class="fab fa-instagram"></i><i class="fab fa-pinterest"></i></p>
+      </div>
+    </div>
+    <%= link_to 'Back', flats_path%>
+  </div>
+</div>

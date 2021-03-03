@@ -10,8 +10,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div class="head">
+    <h4>Simple Arbnb</h4>
+    <div class="right-group"></div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <%= link_to 'Add Flat', new_flat_path, class: 'btn btn-primary rounded' %>
+    </div>
+  </div>
   <body>
-    <%= yield %>
+
+      <%= yield %>
+
   </body>
 </html>

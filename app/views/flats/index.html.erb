@@ -1,0 +1,30 @@
+<div class="container">
+  <h2><%= @title %> (<%= @flats.size %>)</h2>
+  <div class="row">
+
+    <% @flats.each do |flat| %>
+      <div class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src="<%= flat.url %>" alt="Card image cap">
+        <div class="card-body" style="background-color: #F8F9FA">
+          <h5 class="card-title"> <%= flat.name %></h5>
+          <p class="card-text"> <%= flat.address %></p>
+          <div class="flat_infos">
+            <i class="fas fa-user-astronaut"></i>
+            <span><%= flat.number_of_guests %></span>
+            <i class="fas fa-coins"></i>
+            <span><%= flat.price_per_night %></span>
+          </div>
+        </div>
+        <div class="actions">
+          <%= link_to 'More info', flat_path(flat) %>
+          <%= link_to 'Edit', edit_flat_path(flat) %>
+          <%= link_to 'Delete', flat_path(flat), method: "delete" %>
+        </div>
+    </div>
+
+  <% end %>
+
+  </div>
+</div>
+
+
